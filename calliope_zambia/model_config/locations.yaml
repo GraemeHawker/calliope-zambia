@@ -1,0 +1,20 @@
+##
+# LOCATIONS
+##
+
+locations:
+    # region-1-start
+    region1:
+        coordinates: {lat: 40, lon: -2}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=zambia_demand_v1_2030.csv:0
+            ccgt:
+                constraints:
+                    energy_cap_max: 1100 # increased to ensure no unmet_demand in first timestep
+            battery:
+                constraints:
+                    energy_cap_max: 500
+                
+    
